@@ -29,7 +29,15 @@ module Lita
           'はい、なんでしょう？',
           'なんでありましょう？',
           'なんですか？',
-      j
+        ]
+      end
+    end
+    class Ice < Action
+      def initialize
+        @pattern = [
+          'うっ...',
+          'ぐ、ぐぬぬ',
+          'ぱ、パワハラや',
         ]
       end
     end

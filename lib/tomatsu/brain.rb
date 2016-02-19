@@ -23,6 +23,8 @@ module Lita
           Tomatsu::SoftReject.new
         when Tomatsu::Notice
           Tomatsu::Ack.new
+        when Tomatsu::Depress
+          Tomatsu::Ice.new
         end
       end
     end

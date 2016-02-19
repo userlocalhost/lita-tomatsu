@@ -12,5 +12,8 @@ module Lita
     class Notice < Emotion
       KEYWORD = ['おい$']
     end
+    class Depress < Emotion
+      KEYWORD = ['だまれ$', '黙れ$', 'うるさい$', '^こら', '^コラ']
+    end
   end
 end
