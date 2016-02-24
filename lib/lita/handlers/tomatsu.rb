@@ -5,7 +5,7 @@ module Lita
         input_str = resp.matches.first.first
 
         action = Lita::Tomatsu::Brain.consider(input_str)
-        if action != nil
+        if action != nil and resp.message.command?
           resp.reply(action.to_s)
         end
       end
