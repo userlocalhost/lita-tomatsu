@@ -4,7 +4,7 @@ module Lita
       KEYWORD = []
     end
     class Anger < Emotion
-      KEYWORD = ['しろ$', 'るな$', 'んな$', 'れ$', '!$', '！$']
+      KEYWORD = ['しろ$', 'るな$', 'んな$', 'れ$', 'ろ！$', 'ね！$']
     end
     class Protect < Emotion
       KEYWORD = ['こい$', '出せ$']
