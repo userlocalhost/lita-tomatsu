@@ -1,6 +1,7 @@
 require 'tomatsu/brain'
 require 'tomatsu/action'
 require 'tomatsu/emotion'
+require 'tomatsu/memory'
 
 module Lita
   module Tomatsu

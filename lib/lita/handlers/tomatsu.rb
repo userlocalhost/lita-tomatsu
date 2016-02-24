@@ -2,11 +2,13 @@ module Lita
   module Handlers
     class Tomatsu < Handler
       route(/^(.*)$/) do |resp|
-        input_str = resp.matches.first.first
+        if resp.message.command?
+          Lita::Tomatsu::Memory.register(resp.message.body, resp.user.name, resp.room.name)
 
-        action = Lita::Tomatsu::Brain.consider(input_str)
-        if action != nil and resp.message.command?
-          resp.reply(action.to_s)
+          action = Lita::Tomatsu::Brain.consider(resp.message.body)
+          if action != nil
+            resp.reply(action.to_s)
+          end
         end
       end
 
